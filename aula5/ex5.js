@@ -3,8 +3,6 @@ function exerc () {
     const resultado = document.getElementsByClassName("resultado");
     const pessoas = [];
 
-    form.addEventListener('submit', recebeEventoForm);
-
     function recebeEventoForm (evento) {
         evento.preventDefault();
         const nome = form.getElementsByClassName("nome");
@@ -19,6 +17,7 @@ function exerc () {
             altura: altura.value
         });
 
+        form.addEventListener('submit', recebeEventoForm);
         console.log(pessoas);
 
         resultado.innerHTML += `<p>${nome.value} ${sobrenome.value} ${peso.value} ${altura.value}</p>`;
